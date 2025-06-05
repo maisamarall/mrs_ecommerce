@@ -44,7 +44,7 @@
                         </li>
 
                         <li>
-                            <router-link to="/infos" class="hover:underline">Infos</router-link>
+                            <router-link to="/Infos" class="hover:underline">Infos</router-link>
                         </li>
 
                         <li>

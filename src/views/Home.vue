@@ -10,16 +10,12 @@
       <h2 class="font-bold mb-2">Categorias</h2>
       <ul>
         <li v-for="category in categories" :key="category.slug">
-          <button 
-            @click="filterByCategory(category.slug)" 
-            class="text-blue-500 hover:underline">
+          <button @click="filterByCategory(category.slug)" class="text-blue-500 hover:underline">
             {{ category.name }}
           </button>
         </li>
         <li>
-          <button 
-            @click="fetchProducts()" 
-            class="text-red-500 hover:underline">
+          <button @click="fetchProducts()" class="text-red-500 hover:underline">
             Limpar filtro
           </button>
         </li>
@@ -27,20 +23,16 @@
 
       <!-- Busca -->
       <div class="mt-4">
-        <input 
-          v-model="searchQuery" 
-          @input="search" 
-          class="border rounded p-1 w-full" 
+        <input v-model="searchQuery" @input="search"
+          class="border rounded p-1 w-full focus:outline-none focus:ring-2 focus:ring-[#c5a2a6]"
           placeholder="Buscar produtos..." 
-        />
+          />
       </div>
 
       <!-- Ordenação -->
       <div class="mt-4">
-        <select 
-          v-model="sort" 
-          @change="applySort" 
-          class="border rounded p-1 w-full">
+        <select v-model="sort" @change="applySort"
+          class="border rounded p-1 w-full focus:outline-none focus:ring-2 focus:ring-[#c5a2a6]">
           <option value="">Ordenar por</option>
           <option value="price_asc">Preço Crescente</option>
           <option value="price_desc">Preço Decrescente</option>
@@ -52,26 +44,17 @@
 
     <!-- Lista de Produtos -->
     <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <ProductCard 
-        v-for="product in displayedProducts" 
-        :key="product.id" 
-        :product="product" 
-      />
+      <ProductCard v-for="product in displayedProducts" :key="product.id" :product="product" />
     </div>
   </div>
 
   <!-- Paginação -->
   <div class="flex justify-center mt-4 gap-2">
-    <button 
-      @click="prevPage" 
-      :disabled="page === 1" 
-      class="px-2 py-1 border rounded disabled:opacity-50">
+    <button @click="prevPage" :disabled="page === 1" class="px-2 py-1 border rounded disabled:opacity-50">
       Anterior
     </button>
     <span>Página {{ page }}</span>
-    <button 
-      @click="nextPage" 
-      class="px-2 py-1 border rounded">
+    <button @click="nextPage" class="px-2 py-1 border rounded">
       Próxima
     </button>
   </div>
@@ -79,11 +62,11 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { 
-  getProducts, 
-  getCategories, 
-  getProductsByCategory, 
-  searchProducts 
+import {
+  getProducts,
+  getCategories,
+  getProductsByCategory,
+  searchProducts
 } from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
 import Carousel from '../components/Carousel.vue'

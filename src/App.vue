@@ -5,19 +5,16 @@ import Footer from './components/FooterComponent.vue'
 
 <template>
   <div id="app" class="min-h-screen bg-gray-100">
-    <header>
-      <!-- Nav -->
-    </header>
+    <Menu></Menu>
 
-    <main class="flex-1 container mx-auto px-4 py-6">
+    <main class="bg-white">
       <router-view />
     </main>
 
     <footer>
       <Footer />
     </footer>
-  </div>  <Menu></Menu>
-  <router-view></router-view>
+  </div> 
 </template>
 
 <style>
@@ -26,7 +23,7 @@ import Footer from './components/FooterComponent.vue'
 }
 
 body{
-  background-color: #fbfbfb;
+  background-color: white !important;
 }
 
 </style>

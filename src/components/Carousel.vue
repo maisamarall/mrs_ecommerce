@@ -51,8 +51,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/vue/24/outline'
 import imageHero1 from '../assets/images/imageHero1.jpg'
-import imageHero2 from '../assets/images/imageHero2.png'
-import imageHero from '../assets/images/imageHero.png'
+import imageHero2 from '../assets/images/imageHero2.jpeg'
+import imageHero from '../assets/images/imageHero.jpeg'
 
 const images = [
   imageHero1,

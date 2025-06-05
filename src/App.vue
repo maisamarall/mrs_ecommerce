@@ -1,4 +1,5 @@
 <script setup>
+import Menu from './components/Menu.vue'
 import Footer from './components/FooterComponent.vue'
 </script>
 
@@ -15,9 +16,17 @@ import Footer from './components/FooterComponent.vue'
     <footer>
       <Footer />
     </footer>
-  </div>
+  </div>  <Menu></Menu>
+  <router-view></router-view>
 </template>
 
-<style scoped>
+<style>
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  background-color: #fbfbfb;
+}
 
 </style>

@@ -44,7 +44,7 @@
                         </li>
 
                         <li>
-                            <router-link to="/Infos" class="hover:underline">Infos</router-link>
+                            <router-link to="/about" class="hover:underline">Sobre Nós</router-link>
                         </li>
 
                         <li>
@@ -53,7 +53,7 @@
                                     class="absolute -top-2 -right-2 bg-[#c5a2a6] text-white text-[10px] min-w-[16px] h-[16px] flex items-center justify-center rounded-full px-[2px]">
                                     {{ cart.items.length }}
                                 </span>
-                                <ShoppingBagIcon class="w-5 h-5" />
+                                <ShoppingBagIcon class="w-5 h-5 hover:text-[#c5a2a6]" />
                             </router-link>
                         </li>
                     </ul>
